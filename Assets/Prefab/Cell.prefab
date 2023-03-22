@@ -124,5 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a51baad761b274cb03bb8dab944fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AliveColor: {r: 1, g: 1, b: 1, a: 1}
-  DeadColor: {r: 0, g: 0, b: 0, a: 1}
+  AliveColor: {fileID: 21300000, guid: 9ab5525ab61ce3448a2802d2f1137103, type: 3}
+  DeadColor: {fileID: 21300000, guid: de89cdb340f096140bc6c4269a9fb8b8, type: 3}
+  NextState: 0

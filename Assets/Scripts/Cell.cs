@@ -7,8 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Cell: MonoBehaviour
 {
-    [SerializeField] private Color AliveColor;
-    [SerializeField] private Color DeadColor;
+    [SerializeField] private Sprite AliveColor;
+    [SerializeField] private Sprite DeadColor;
 
     private Index _me;
     private Index[] _neighbours;
@@ -17,7 +17,7 @@ public class Cell: MonoBehaviour
     private bool _isAlive;
     private int _state;
     private SpriteRenderer _sr;
-    public NextStateEnum NextState;
+    [HideInInspector] public NextStateEnum NextState;
 
     public void Init(int _x, int _y, int _width, int _height)
     {
@@ -49,7 +49,7 @@ public class Cell: MonoBehaviour
         {
             _isAlive = value;
             _state = _isAlive ? 1 : 0;
-            _sr.color = _isAlive ? AliveColor : DeadColor;
+            _sr.sprite = _isAlive ? AliveColor : DeadColor;
         }
     }
 
